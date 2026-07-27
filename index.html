@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dany Motta Serviços - Confeitaria, Bartender & Estações</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome para Ícones Modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonte Google Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navegação -->
+    <header class="navbar">
+        <div class="logo">
+            <span>Dany Motta Serviços</span>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Início (Hero) -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Eventos & Confeitaria Artesanal</span>
+            <h1>Sabor, Elegância e Experiência Inesquecível</h1>
+            <p>De bolos recheados e doces gourmet a serviços completos de Bartender e Estações de Açaí para a sua festa.</p>
+            <div class="hero-buttons">
+                <a href="#servicos" class="btn-primary"><i class="fas fa-utensils"></i> Explorar Nossos Serviços</a>
+                <a href="#contato" class="btn-outline"><i class="fab fa-whatsapp"></i> Falar Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="section-container sobre-section">
+        <div class="section-header">
+            <h2>Sobre Nós</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="sobre-content">
+            <div class="sobre-text">
+                <p>Olá <strong>Sou Daniele Motta</strong>,
+        
+                e minha missão é transformar sua festa em uma experiência inesquecível.
+                Unindo confeitaria artesanal, bartender e estações gastronômicas, levo sabor e charme ao seu evento.
+                Encante seus convidados com bolos e doces refinados, feitos com ingredientes selecionados.
+                Eleve a celebração com um open bar completo, drinks marcantes e atendimento impecável.
+                Adicione praticidade e alegria com nossas estações gastronômicas de açaí e pastel.
+                Cada projeto é único: entrego atendimento personalizado, pontualidade e carinho em cada detalhe.
+                Será um prazer fazer parte da sua história e transformar sua comemoração em pura emoção!.</p>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="section-container">
+        <div class="section-header">
+            <h2>Nossos Serviços</h2>
+            <p>Selecione a categoria desejada para ver preços, tamanhos, recheios e fazer o seu pedido.</p>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Alerta de Condições de Confeitaria -->
+        <div class="info-alert-box">
+            <h4><i class="fas fa-info-circle"></i> Regras e Condições Gerais (Bolos, Doces e Salgados)</h4>
+            <ul>
+                <li><strong>Confirmação de Pedido:</strong> Pagamento de 50% do valor até 3 dias antes da data agendada. O restante deve ser pago no ato da entrega/retirada.</li>
+                <li><strong>Pagamento:</strong> Pix, débito ou crédito (cartões possuem acréscimo da maquininha).</li>
+                <li><strong>Retirada/Transporte:</strong> Solicitação de Uber Flash a critério e responsabilidade do cliente. Não nos responsabilizamos por incidentes no transporte.</li>
+                <li><strong>Cancelamentos:</strong> Em caso de cancelamento, o sinal não será devolvido (custeio de insumos já comprados).</li>
+            </ul>
+        </div>
+
+        <!-- GRID DOS CARDS -->
+        <div class="cards-grid">
+
+            <!-- Card 1: Bolos Recheios Tradicionais -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/bolo-tradicional.jpg" alt="Bolos Tradicionais">
+                </div>
+                <div class="card-body">
+                    <h3>Bolos - Recheios Tradicionais</h3>
+                    <p>Bolos redondos e retangulares com massas amanteigadas ou de chocolate e recheios clássicos.</p>
+                    <button class="btn-card" onclick="openModal('modal-tradicionais')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div>
+            </div>
+
+            <!-- Card 2: Bolos Recheios Especiais -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/bolo-especial.jpg" alt="Bolos Especiais">
+                </div>
+                <div class="card-body">
+                    <h3>Bolos - Recheios Especiais</h3>
+                    <p>Combinações nobres como Chocolate Branco com Morango, Abacaxi com Coco e Prestígio.</p>
+                    <button class="btn-card" onclick="openModal('modal-especiais')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div>
+            </div>
+
+            <!-- Card 3: Docinhos Tradicionais -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/doces-tradicionais.jpg" alt="Docinhos Tradicionais">
+                </div>
+                <div class="card-body">
+                    <h3>Docinhos Tradicionais</h3>
+                    <p>Brigadeiro, Beijinho, Cajuzinho, Morango e Ninho. Entregues em caixinhas e forminhas organizadas.</p>
+                    <button class="btn-card" onclick="openModal('modal-doces-trad')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div>
+            </div>
+
+            <!-- Card 4: Docinhos Gourmet -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/doces-gourmet.jpg" alt="Docinhos Gourmet">
+                </div>
+                <div class="card-body">
+                    <h3>Docinhos Gourmet</h3>
+                    <p>Variedade artesanal incrível: Romeu e Julieta, Caipirinha, Ninho com Nutella, Oreo e muito mais.</p>
+                    <button class="btn-card" onclick="openModal('modal-doces-gourmet')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div>
+            </div>
+
+            <!-- Card 5: Bentô Cake -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/bento-cake.jpg" alt="Bentô Cake">
+                </div>
+                <div class="card-body">
+                    <h3>Bentô Cake</h3>
+                    <p>Bolinho divertido na marmita, personalizado com papel de arroz, vela, colher e sacola.</p>
+                    <button class="btn-card" onclick="openModal('modal-bento')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div>
+            </div>
+
+            <!-- Card 6: Kit Festa -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/kit-festa.jpg" alt="Kit Festa">
+                </div>
+                <div class="card-body">
+                    <h3>Kit Festa Completo</h3>
+                    <p>Combos práticos com Bolo, Cupcakes, Salgadinhos, Docinhos, Refri e Topo de bolo grátis.</p>
+                    <button class="btn-card" onclick="openModal('modal-kit-festa')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div>
+            </div>
+
+            <!-- Card 7: Festa na Caixa -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/festa-caixa.jpg" alt="Festa na Caixa">
+                </div>
+                <div class="card-body">
+                    <h3>Festa na Caixa</h3>
+                    <p>Opções românticas e infantis completas com Bolo, doces, salgados, bebidas e decoração.</p>
+                    <button class="btn-card" onclick="openModal('modal-festa-caixa')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div>
+            </div>
+
+            <!-- Card 8: Doces Diversos -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/doces-diversos.jpg" alt="Doces Diversos">
+                </div>
+                <div class="card-body">
+                    <h3>Doces Diversos</h3>
+                    <p>Palha Italiana, Trufas, Brownies, Cupcakes, Tortinhas e Mini Churros.</p>
+                    <button class="btn-card" onclick="openModal('modal-doces-div')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div> 
+            </div>
+
+            <!-- Card 9: Salgados Diversos -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/salgados.jpg" alt="Salgados Diversos">
+                </div>
+                <div class="card-body">
+                    <h3>Salgados Diversos</h3>
+                    <p>Cento de salgados fritos ou congelados, empadas, bolinhos de bacalhau e mini pasteis.</p>
+                    <button class="btn-card" onclick="openModal('modal-salgados')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div>
+            </div>
+
+            <!-- Card 10: Serviços de Bartender -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/bartender.jpg" alt="Bartender">
+                </div>
+                <div class="card-body">
+                    <h3>Serviços de Bartender</h3>
+                    <p>Mão de obra qualificada ou estrutura de Open Bar Padrão e Completo com e sem álcool.</p>
+                    <button class="btn-card" onclick="openModal('modal-bartender')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div>
+            </div>
+
+            <!-- Card 11: Estação de Açaí e Sorvete -->
+            <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="img/acai.jpg" alt="Estação Açaí">
+                </div>
+                <div class="card-body">
+                    <h3>Estações de Açaí e Sorvete</h3>
+                    <p>Estações completas de açaí e sorvete com coberturas, guloseimas e descartáveis inclusos.</p>
+                    <button class="btn-card" onclick="openModal('modal-acai')"><i class="fas fa-tag"></i> Ver Preços e Valores</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Dany Motta Serviços</h3>
+                <p>Confeitaria, Salgados, Bartender e Estações de Açaí.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+            <div class="footer-contact">
+            <h4>Contato Direto</h4>
+            <p>
+            <!-- Link direto para o WhatsApp -->
+            <a href="https://wa.me/5521985048268" target="_blank" style="color: inherit; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i> (21) 98504-8268
+            </a>
+            </p>
+                <a href="https://www.instagram.com/danymottabartender/" target="_blank" style="color: inherit; text-decoration: none;">
+                    <i class="fab fa-instagram"></i> @danymottabartender
+                </a>
+            </p>
+            <p>
+                <a href="https://www.instagram.com/danymottacakeseestacoes/" target="_blank" style="color: inherit; text-decoration: none;">
+                    <i class="fab fa-instagram"></i> @danymottacakeseestacoes
+                </a>
+            </p>
+        </div>
+        </div>
+        <div class="footer-bottom">
+        <p> &copy; 2026 Dany Motta Eventos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ================= MODAIS DE PREÇOS E SERVIÇOS ================= -->
+
+    <!-- Modal 1: Recheios Tradicionais -->
+    <div id="modal-tradicionais" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-tradicionais')">&times;</span>
+            <h2>🍰 Bolos - Recheios Tradicionais</h2>
+            
+            <div class="modal-section">
+                <h3>Opções Redondas</h3>
+                <ul class="price-list">
+                    <li>12 cm (08 fatias*) — <strong>R$ 80,00</strong></li>
+                    <li>15 cm (15 fatias*) — <strong>R$ 130,00</strong></li>
+                    <li>20 cm (28 fatias*) — <strong>R$ 190,00</strong></li>
+                    <li>25 cm (42 fatias*) — <strong>R$ 240,00</strong></li>
+                    <li>30 cm (56 fatias*) — <strong>R$ 330,00</strong></li>
+                </ul>
+
+                <h3>Opções Retangulares</h3>
+                <ul class="price-list">
+                    <li>Bolo Simples (Corte - 25 fatias) — <strong>R$ 160,00</strong></li>
+                    <li>Bolo Simples (Corte - 50 fatias) — <strong>R$ 290,00</strong></li>
+                    <li>Bolo Decorado (25 fatias) — <strong>R$ 180,00</strong></li>
+                    <li>Bolo Decorado (50 fatias) — <strong>R$ 310,00</strong></li>
+                </ul>
+
+                <p><strong>Massas disponíveis:</strong> Amanteigada ou Chocolate.</p>
+                <p><strong>Recheios Tradicionais:</strong> Brigadeiro, Beijinho, Morango, Leite Ninho, Paçoca, Doce de Leite.</p>
+                <small>*A quantidade de fatias pode variar pelo corte. Topo de bolo, papelaria, flores, KitKat cobrados à parte. Entregue em cake board de madeira e caixa.</small>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-trad" placeholder="Seu Nome">
+                <input type="text" id="detalhe-trad" placeholder="Tamanho, Massa e Recheio escolhido">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Bolos Tradicionais', 'nome-trad', 'detalhe-trad')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Recheios Especiais -->
+    <div id="modal-especiais" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-especiais')">&times;</span>
+            <h2>🌟 Bolos - Recheios Especiais</h2>
+            
+            <div class="modal-section">
+                <h3>Opções Redondas</h3>
+                <ul class="price-list">
+                    <li>12 cm (08 fatias*) — <strong>R$ 120,00</strong></li>
+                    <li>15 cm (15 fatias*) — <strong>R$ 160,00</strong></li>
+                    <li>20 cm (28 fatias*) — <strong>R$ 210,00</strong></li>
+                    <li>25 cm (42 fatias*) — <strong>R$ 270,00</strong></li>
+                    <li>30 cm (56 fatias*) — <strong>R$ 360,00</strong></li>
+                </ul>
+
+                <h3>Opções Retangulares</h3>
+                <ul class="price-list">
+                    <li>Bolo Simples (Corte - 25 fatias) — <strong>R$ 180,00</strong></li>
+                    <li>Bolo Simples (Corte - 50 fatias) — <strong>R$ 310,00</strong></li>
+                    <li>Bolo Decorado (25 fatias) — <strong>R$ 200,00</strong></li>
+                    <li>Bolo Decorado (50 fatias) — <strong>R$ 330,00</strong></li>
+                </ul>
+
+                <p><strong>Massas disponíveis:</strong> Amanteigada ou Chocolate.</p>
+                <p><strong>Recheios Especiais:</strong> Chocolate branco com morango, Brigadeiro branco com abacaxi, Doce de leite com ameixa, Abacaxi com coco, Prestígio.</p>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-esp" placeholder="Seu Nome">
+                <input type="text" id="detalhe-esp" placeholder="Tamanho, Massa e Recheio Especial escolhido">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Bolos Especiais', 'nome-esp', 'detalhe-esp')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Docinhos Tradicionais -->
+    <div id="modal-doces-trad" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-doces-trad')">&times;</span>
+            <h2>🍬 Docinhos Tradicionais</h2>
+            
+            <div class="modal-section">
+                <p><strong>Sabores:</strong> Brigadeiro, Morango, Beijinho, Cajuzinho, Ninho.</p>
+                <ul class="price-list">
+                    <li>25 Unidades — <strong>R$ 40,00</strong></li>
+                    <li>50 Unidades — <strong>R$ 75,00</strong></li>
+                    <li>100 Unidades — <strong>R$ 140,00</strong></li>
+                </ul>
+                <small>*Entregues ao cliente com forminhas e caixinhas nas cores desejadas.</small>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-doces-t" placeholder="Seu Nome">
+                <input type="text" id="detalhe-doces-t" placeholder="Quantidade e Sabores desejados">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Docinhos Tradicionais', 'nome-doces-t', 'detalhe-doces-t')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Docinhos Gourmet -->
+    <div id="modal-doces-gourmet" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-doces-gourmet')">&times;</span>
+            <h2>✨ Docinhos Gourmet</h2>
+            
+            <div class="modal-section">
+                <p><strong>Sabores:</strong> Brigadeiro c/ pedaços de chocolate, Romeu e Julieta, Morango, Limão, Maracujá, Caipirinha, Café, Uva, Confete, Oreo, Ninho c/ Nutella, Paçoca.</p>
+                <ul class="price-list">
+                    <li>25 Unidades — <strong>R$ 55,00</strong></li>
+                    <li>50 Unidades — <strong>R$ 90,00</strong></li>
+                    <li>100 Unidades — <strong>R$ 170,00</strong></li>
+                </ul>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-doces-g" placeholder="Seu Nome">
+                <input type="text" id="detalhe-doces-g" placeholder="Quantidade e Sabores Gourmet desejados">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Docinhos Gourmet', 'nome-doces-g', 'detalhe-doces-g')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Bentô Cake -->
+    <div id="modal-bento" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-bento')">&times;</span>
+            <h2>🎁 Bentô Cake na Marmita</h2>
+            
+            <div class="modal-section">
+                <p class="highlight-price">Valor: R$ 50,00</p>
+                <p><strong>Massa:</strong> Amanteigada ou Chocolate.</p>
+                <p><strong>Recheio:</strong> Brigadeiro, Beijinho, Doce de leite ou Morango.</p>
+                <blockquote class="bento-quote">
+                    "Nosso bolinho bentô cake na marmita é ideal para presentear quem você ama, recheado generosamente, personalizado com papel de arroz no tema escolhido, acompanha vela, colher e sacola."
+                </blockquote>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-bento" placeholder="Seu Nome">
+                <input type="text" id="detalhe-bento" placeholder="Tema do desenho/frase, massa e recheio">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Bentô Cake', 'nome-bento', 'detalhe-bento')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: Kit Festa -->
+    <div id="modal-kit-festa" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-kit-festa')">&times;</span>
+            <h2>🎉 Kits Festa</h2>
+            
+            <div class="modal-section">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>KIT</th>
+                            <th>Bolo</th>
+                            <th>Cupcake</th>
+                            <th>Salgados</th>
+                            <th>Doces</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>12 cm</td><td>5</td><td>0</td><td>10</td><td>R$ 130,00</td></tr>
+                        <tr><td>2</td><td>15 cm</td><td>6</td><td>100</td><td>25</td><td>R$ 250,00</td></tr>
+                        <tr><td>3</td><td>20 cm</td><td>12</td><td>150</td><td>50</td><td>R$ 350,00</td></tr>
+                        <tr><td>4</td><td>25 cm</td><td>12</td><td>200</td><td>100</td><td>R$ 440,00</td></tr>
+                    </tbody>
+                </table>
+
+                <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-top: 15px;">
+                    <h4 style="color: var(--dark-purple); margin-bottom: 8px;">Informações dos Kits:</h4>
+                    <ul style="text-align: left; font-size: 0.88rem; color: #444; padding-left: 20px; line-height: 1.6;">
+                        <li>Os itens dos kits não poderão ser alterados.</li>
+                        <li>O bolo será decorado (na cor desejada) ou no acetato.</li>
+                        <li>Os docinhos de menor quantidade serão apenas de um sabor.</li>
+                        <li>Os salgados terão sabores sortidos.</li>
+                        <li><strong>Brinde:</strong> Todos os kits acompanham topo de bolo e um refri de 1,5L (Pepsi ou Guaraná).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-kit" placeholder="Seu Nome">
+                <input type="text" id="detalhe-kit" placeholder="Número do Kit escolhido e detalhes">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Kit Festa', 'nome-kit', 'detalhe-kit')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7: Festa na Caixa -->
+    <div id="modal-festa-caixa" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-festa-caixa')">&times;</span>
+            <h2>📦 Festa na Caixa</h2>
+            
+            <div class="modal-section">
+                <ul class="price-list">
+                    <li><strong>Festa Nº 1 (R$ 130,00):</strong> 1 Bolo 10cm (confeitado/acetato), 10 docinhos, 10 salgadinhos sortidos, 2 latas de refri/suco/cerveja.</li>
+                    <li><strong>Festa Nº 2 (R$ 160,00):</strong> 1 Bolo 15cm (decorado KitKat/acetato), 30 docinhos, 30 salgadinhos sortidos, 2 latas de refri/suco/cerveja, 2 taças acrílico.</li>
+                    <li><strong>Festa Infantil (R$ 210,00):</strong> 1 Bolo 15cm (decorado c/ topo/acetato), 10 docinhos, 4 cupcakes, 4 pirulitos de chocolate, painel do tema + mini arco de bola + caixa decorada + brinde surpresa.</li>
+                </ul>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-festa-cx" placeholder="Seu Nome">
+                <input type="text" id="detalhe-festa-cx" placeholder="Opção escolhida (1, 2 ou Infantil) e Tema">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Festa na Caixa', 'nome-festa-cx', 'detalhe-festa-cx')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8: Doces Diversos -->
+    <div id="modal-doces-div" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-doces-div')">&times;</span>
+            <h2>🍫 Doces Diversos</h2>
+            
+            <div class="modal-section">
+                <ul class="price-list">
+                    <li>Palha Italiana (mínimo 20 unid.) — <strong>R$ 6,00 /unid</strong></li>
+                    <li>Trufas (mínimo 20 unid.) — <strong>R$ 4,00 /unid</strong></li>
+                    <li>Brownie Recheado (mínimo 20 unid.) — <strong>R$ 6,00 /unid</strong></li>
+                </ul>
+
+                <div style="margin-top: 20px;">
+                    <h3 style="color: var(--primary-pink); margin-bottom: 8px;">Cupcakes</h3>
+                    <ul class="price-list">
+                        <li>Tradicionais — <strong>Mini: R$ 3,00 | Grande: R$ 3,50</strong></li>
+                        <li>Recheados — <strong>Mini: R$ 4,50 | Grande: R$ 5,50</strong></li>
+                    </ul>
+
+                    <h3 style="color: var(--primary-pink); margin: 15px 0 8px 0;">Tortinha</h3>
+                    <ul class="price-list">
+                        <li>Cento — <strong>R$ 120,00</strong></li>
+                    </ul>
+
+                    <h3 style="color: var(--primary-pink); margin: 15px 0 8px 0;">Mini Churros</h3>
+                    <ul class="price-list">
+                        <li>Cento Frito — <strong>R$ 65,00</strong></li>
+                        <li>Congelado — <strong>R$ 45,00</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-doces-div" placeholder="Seu Nome">
+                <input type="text" id="detalhe-doces-div" placeholder="Opção escolhida e Quantidade">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Doces Diversos', 'nome-doces-div', 'detalhe-doces-div')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 9: Salgados Diversos -->
+    <div id="modal-salgados" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-salgados')">&times;</span>
+            <h2>🥐 Salgados Diversos</h2>
+            
+            <div class="modal-section">
+                <ul class="price-list">
+                    <li>Salgados Tradicionais (Cento Frito) — <strong>R$ 65,00</strong></li>
+                    <li>Salgados Tradicionais (Cento Congelado) — <strong>R$ 55,00</strong></li>
+                    <li>Empadas (Unidade R$ 3,50) | Cento — <strong>R$ 90,00</strong></li>
+                    <li>Bolinho de Bacalhau Frito (Cento) — <strong>R$ 80,00</strong></li>
+                    <li>Bolinho de Bacalhau Congelado (Cento) — <strong>R$ 60,00</strong></li>
+                    <li>Mini Pastéis Fritos (Cento) — <strong>R$ 65,00</strong></li>
+                    <li>Mini Pastéis Congelados (Cento) — <strong>R$ 60,00</strong></li>
+                </ul>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-salgado" placeholder="Seu Nome">
+                <input type="text" id="detalhe-salgado" placeholder="Tipo de salgado e Quantidade">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Salgados Diversos', 'nome-salgado', 'detalhe-salgado')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 10: Bartender -->
+    <div id="modal-bartender" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-bartender')">&times;</span>
+            <h2>🍹 Serviços de Bartender (Dany Motta)</h2>
+            
+            <div class="modal-section">
+
+                <!-- 1. Sistema Mão de Obra -->
+                <h3>1. Sistema Mão de Obra (Apenas Serviço - 5h)</h3>
+                <ul class="price-list" style="margin-bottom: 20px;">
+                    <li>Até 60 convidados — <strong>R$ 250,00</strong></li>
+                    <li>Até 80 convidados — <strong>R$ 290,00</strong></li>
+                    <li>Até 120 convidados — <strong>R$ 320,00</strong></li>
+                    <li>Acima de 120 convidados — <strong>A combinar</strong></li>
+                </ul>
+
+                <!-- 2. Pacote Open Bar Padrão -->
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 18px; border-radius: 12px; margin-top: 15px; text-align: left;">
+                    <h3 style="background-color: #FFD700; color: #000; display: inline-block; padding: 6px 16px; border-radius: 6px; font-weight: 800; font-size: 1rem; margin-bottom: 12px;">
+                        OPEN BAR PADRÃO
+                    </h3>
+                    
+                    <p style="font-size: 0.88rem; color: #333; margin-bottom: 6px;"><strong>Equipe e Inclusos:</strong> 1 Bartender. Materiais, decoração (incluso copos e canudos) e Drinks com e sem álcool.</p>
+                    <p style="font-size: 0.88rem; color: #333; margin-bottom: 6px;"><strong>Duração:</strong> 5 horas de drinks <em>("Chego 1 hora antes para arrumação.")</em></p>
+                    <p style="font-size: 0.88rem; color: #333; margin-bottom: 12px;"><strong>Frutas utilizadas:</strong> Morango, Limão, Maracujá e Abacaxi 🍓 🍋 🍍</p>
+
+                    <h4 style="color: #c96fa0; font-size: 0.95rem; margin-bottom: 8px;">Cardápio de Bebidas:</h4>
+                    <ul style="padding-left: 20px; font-size: 0.85rem; color: #444; line-height: 1.6; margin-bottom: 12px;">
+                        <li><strong>Drinks Alcoólicos (Até 4 opções):</strong> Caipirinhas, Caipvodkas, Pina Colada, Sex on the Beach, Lagoa Azul, Gin Tropical, Gin Tônica, Mar Vermelho.</li>
+                        <li><strong>Destilados Utilizados:</strong> Vodkas (Smirnoff), Licores (Fórmula), Cachaças (51 ou Velho Barreiro).</li>
+                        <li><strong>Drinks Não Alcoólicos (1 opção):</strong> Coquetel de frutas, Suco de frutas (Sabores), Caipifruta, Outros drinks (consulte).</li>
+                    </ul>
+
+                    <h4 style="color: #c96fa0; font-size: 0.95rem; margin-bottom: 8px;">Termos e Condições:</h4>
+                    <ul style="padding-left: 20px; font-size: 0.85rem; color: #444; line-height: 1.6; margin-bottom: 12px;">
+                        <li><strong>Responsabilidade do Contratante:</strong> Gelo não está incluso no serviço. O contratante fica responsável pela compra do gelo filtrado. Deslocamento da equipe (Uber).</li>
+                        <li><strong>Condições de Pagamento:</strong> Sinal de R$ 200,00 para reservar a data. Restante do valor pode ser pago parcelado até o dia do evento (Cartão com acréscimo da máquina ou Pix).</li>
+                    </ul>
+
+                    <h4 style="color: #d81b60; font-size: 1.2rem; font-weight: 800; margin-top: 10px;">VALOR TOTAL: R$ 880,00</h4>
+                </div>
+
+                <!-- 3. Pacote Open Bar Completo -->
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 18px; border-radius: 12px; margin-top: 15px; text-align: left;">
+                    <h3 style="background-color: #FFD700; color: #000; display: inline-block; padding: 6px 16px; border-radius: 6px; font-weight: 800; font-size: 1rem; margin-bottom: 12px;">
+                        OPEN BAR COMPLETO
+                    </h3>
+                    
+                    <p style="font-size: 0.88rem; color: #333; margin-bottom: 6px;"><strong>Equipe e Inclusos:</strong> 1 Bartender e 1 Ajudante. Materiais, descartáveis, decoração (incluso copos e canudos) e Drinks com e sem álcool.</p>
+                    <p style="font-size: 0.88rem; color: #333; margin-bottom: 6px;"><strong>Duração:</strong> 5 horas de drinks.</p>
+                    <p style="font-size: 0.88rem; color: #333; margin-bottom: 12px;"><strong>Frutas utilizadas:</strong> Morango, Limão, Maracujá e Abacaxi 🍓 🍋 🍍</p>
+
+                    <h4 style="color: #c96fa0; font-size: 0.95rem; margin-bottom: 8px;">Cardápio de Bebidas:</h4>
+                    <ul style="padding-left: 20px; font-size: 0.85rem; color: #444; line-height: 1.6; margin-bottom: 12px;">
+                        <li><strong>Drinks Alcoólicos:</strong> Caipirinhas, Caipvodkas, Pina colada, Sex on the beach, Lagoa azul, Gin tropical, Gin tônica e Mar vermelho.</li>
+                        <li><strong>Destilados Utilizados:</strong> Vodkas (Smirnoff), Licores (Fórmula), Cachaças (51 ou Velho Barreiro).</li>
+                        <li><strong>Drinks Não Alcoólicos:</strong> Coquetel de frutas, Suco de frutas e Caipifruta.</li>
+                    </ul>
+
+                    <h4 style="color: #c96fa0; font-size: 0.95rem; margin-bottom: 8px;">Termos e Condições:</h4>
+                    <ul style="padding-left: 20px; font-size: 0.85rem; color: #444; line-height: 1.6; margin-bottom: 12px;">
+                        <li><strong>Responsabilidade do Contratante:</strong> Gelo não está incluso no serviço. O contratante fica responsável pela compra do gelo filtrado. Deslocamento da equipe e materiais.</li>
+                        <li><strong>Condições de Pagamento:</strong> Sinal de R$ 200,00 para reservar a data. Restante do valor pode ser pago parcelado até o dia do evento (Cartão com acréscimo da máquina ou Pix).</li>
+                    </ul>
+
+                    <h4 style="color: #d81b60; font-size: 1.2rem; font-weight: 800; margin-top: 10px;">VALOR TOTAL: R$ 1.350,00</h4>
+                </div>
+
+                <!-- Pacote Drinks Sem Álcool -->
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 18px; border-radius: 12px; margin-top: 15px; text-align: left;">
+                    <h3 style="background-color: #FFD700; color: #000; display: inline-block; padding: 6px 16px; border-radius: 6px; font-weight: 800; font-size: 1rem; margin-bottom: 12px;">
+                        DRINKS SEM ÁLCOOL
+                    </h3>
+                    
+                    <p style="font-size: 0.88rem; color: #333; margin-bottom: 6px;"><strong>Equipe e Inclusos:</strong> 1 Bartender e 1 Ajudante. Materiais, descartáveis e decoração (incluso copos e canudos).</p>
+                    <p style="font-size: 0.88rem; color: #333; margin-bottom: 6px;"><strong>Duração:</strong> 5 horas de drinks.</p>
+                    <p style="font-size: 0.88rem; color: #333; margin-bottom: 12px;"><strong>Frutas utilizadas:</strong> Morango, Limão, Maracujá e Abacaxi 🍓 🍋 🍍</p>
+
+                    <h4 style="color: var(--primary-pink); font-size: 0.95rem; margin-bottom: 8px;">Coquetéis Não Alcoólicos (Cardápio):</h4>
+                    <ul style="padding-left: 20px; font-size: 0.85rem; color: #444; line-height: 1.6; margin-bottom: 15px;">
+                        <li><strong>Maracujá ao leite:</strong> Bebida amarela com sementes de maracujá</li>
+                        <li><strong>Piña colada:</strong> Bebida cremosa clara decorada com abacaxi</li>
+                        <li><strong>Lagoa azul:</strong> Bebida azul decorada com limão</li>
+                        <li><strong>Sex on the Beach:</strong> Bebida em tons de laranja e vermelho, decorada com laranja e cereja</li>
+                        <li><strong>Caipifruta:</strong> Bebida verde com pedaços de limão e hortelã</li>
+                        <li><strong>Eu e ela:</strong> Bebida escura, semelhante a refrigerante de cola, com limão</li>
+                    </ul>
+
+                    <h4 style="color: var(--primary-pink); font-size: 0.95rem; margin-bottom: 8px;">Termos e Condições:</h4>
+                    <ul style="padding-left: 20px; font-size: 0.85rem; color: #444; line-height: 1.6; margin-bottom: 12px;">
+                        <li><strong>Deslocamento:</strong> Uber ida e valor de R$ 60 (equipe e materiais).</li>
+                        <li><strong>Condições de Pagamento:</strong> Sinal de R$ 200,00 para reservar a data. Restante do valor pode ser pago parcelado até o dia do evento (Cartão com acréscimo da máquina ou Pix).</li>
+                    </ul>
+
+                    <h4 style="color: #d81b60; font-size: 1.2rem; font-weight: 800; margin-top: 10px;">VALOR TOTAL: R$ 1.180,00</h4>
+                </div>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-bartender" placeholder="Seu Nome">
+                <input type="text" id="detalhe-bartender" placeholder="Pacote escolhido, data do evento e nº de convidados">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Bartender', 'nome-bartender', 'detalhe-bartender')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 11: Açaí e Sorvete -->
+    <div id="modal-acai" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-acai')">&times;</span>
+            <h2>🍨 Estações de Açaí e Sorvete</h2>
+            
+            <div class="modal-section">
+                <h3>1. Estação de Açaí Básica (10 Litros) — R$ 300,00</h3>
+                <p>Serve até 100 pessoas (3h de festa). Inclusos: 10L Açaí, 3 coberturas, 5 guloseimas, 4 complementos e descartáveis.</p>
+
+                <h3>2. Pacotes Combos Açaí + Sorvete (3 horas)</h3>
+                <ul class="price-list">
+                    <li>Pacote P (5L Sorvete + 5L Açaí) — <strong>R$ 300,00</strong></li>
+                    <li>Pacote M (10L Açaí + 5L Sorvete) — <strong>R$ 350,00</strong></li>
+                    <li>Pacote G (10L Sorvete + 10L Açaí) — <strong>R$ 390,00</strong></li>
+                </ul>
+            </div>
+
+            <div class="whatsapp-lead-box">
+                <h4>Não achou o que queria? Solicite o serviço ou sabor desejado pelo WhatsApp:</h4>
+                <input type="text" id="nome-acai" placeholder="Seu Nome">
+                <input type="text" id="detalhe-acai" placeholder="Pacote de Açaí/Sorvete escolhido">
+                <button class="btn-whatsapp-direct" onclick="sendCustomWhatsApp('Estação de Açaí e Sorvete', 'nome-acai', 'detalhe-acai')">
+                    <i class="fab fa-whatsapp"></i> Pedir Serviço para a Daniele
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
