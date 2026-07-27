@@ -422,3 +422,13 @@ body {
 .footer-links ul { list-style: none; }
 .footer-links a { color: #ccc; text-decoration: none; line-height: 2; }
 .footer-bottom { text-align: center; border-top: 1px solid #222; padding-top: 20px; font-size: 0.8rem; color: #aaa; }
+
+
+@media (max-width: 768px) {
+    .sua-caixa-de-conteudo {
+        width: 100%; /* Faz a caixa ocupar a tela toda */
+        display: flex;
+        flex-direction: column; /* Coloca os itens um embaixo do outro */
+        padding: 10px;
+    }
+}
