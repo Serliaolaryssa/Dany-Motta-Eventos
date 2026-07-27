@@ -454,5 +454,80 @@ body {
     }
 }
 
+/* --- ESTILIZAÇÃO DOS NOVOS CARTÕES DE FESTA --- */
 
+/* Contêiner geral das festas */
+.parties-container {
+    display: flex;
+    flex-direction: column; /* Organiza em coluna (um abaixo do outro) */
+    align-items: center;    /* Centraliza os cartões horizontalmente */
+    gap: 20px;             /* Espaço entre os cartões */
+    margin: 30px 0;         /* Margem superior e inferior */
+}
+
+/* O Cartão em si */
+.party-card {
+    display: flex;
+    background-color: #f8f8f8; /* Fundo cinza bem clarinho para destacar */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;           /* Ocupa a largura total do espaço */
+    max-width: 600px;      /* Mas não fica gigante em telas grandes */
+    box-sizing: border-box; /* Garante que padding e border não quebrem a largura */
+}
+
+/* Coluna do título e preço */
+.party-header-col {
+    display: flex;
+    flex-direction: column; /* Título em cima, preço embaixo */
+    align-items: center;    /* Centraliza os textos dentro da coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    width: 30%;             /* Largura fixa da coluna da esquerda */
+    margin-right: 15px;     /* Espaço entre a coluna do título e a de detalhes */
+    border-right: 1px dashed #e0e0e0; /* Divisória tracejada */
+}
+
+.party-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.party-price {
+    font-size: 14px;
+    color: #444; /* Cor um pouco mais suave */
+}
+
+/* Coluna dos detalhes */
+.party-details-col {
+    width: 70%;             /* Largura da coluna de detalhes */
+}
+
+.party-details-col p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Ajustes finos para celulares (telas menores) */
+@media (max-width: 600px) {
+    /* Em celulares muito pequenos, podemos mudar para um layout de coluna total */
+    .party-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .party-header-col {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border-right: none;
+        border-bottom: 1px dashed #e0e0e0;
+        padding-bottom: 10px;
+    }
+    
+    .party-details-col {
+        width: 100%;
+    }
+}
 
