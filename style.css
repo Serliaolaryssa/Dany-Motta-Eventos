@@ -425,3 +425,34 @@ body {
 
 
 
+/* --- AJUSTE DA BARRA DO TOPO PARA CELULAR --- */
+@media (max-width: 768px) {
+    /* Muda a barra para ficar em coluna (um embaixo do outro) */
+    .navbar {
+        flex-direction: column; 
+        padding: 15px 10px;
+        text-align: center;
+    }
+    /* Ajusta o título "Dany Motta Serviços" */
+    .logo {
+        margin-bottom: 12px; /* Dá um espacinho entre o título e o menu */
+    }
+    
+    .logo span {
+        font-size: 24px; /* Diminui um pouco o tamanho para não esmagar */
+        line-height: 1.2;
+    }
+    /* Ajusta o menu (Início, Sobre Nós...) */
+    .nav-menu {
+        flex-wrap: wrap; /* Deixa os links quebrarem de linha se a tela for muito pequena */
+        justify-content: center;
+        gap: 12px; /* Espaço entre os links */
+    }
+    .nav-menu li a {
+        font-size: 14px; /* Fonte menor para caber tudo na tela */
+        padding: 5px;
+    }
+}
+
+
+
